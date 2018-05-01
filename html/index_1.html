@@ -1,0 +1,171 @@
+<html>
+<head>
+<style>
+body
+{
+margin:0%;
+padding:0%;
+}
+header
+{
+width:100%;
+margin:0%;
+background:#ffe4c4;
+height:10%;
+display:block;
+font-size:30px;
+}
+
+nav
+{
+width:100%;
+margin-top:.2%;
+background:#f0f8ff;
+height:9.8%;
+padding:0px;
+display:table;
+}
+
+nav a
+{
+display:table-cell;
+vertical-align:middle;
+width:25%;
+text-align:center;
+font-size:1.5em;
+text-decoration:none;
+color:#777;
+}
+
+nav a:hover
+{
+color:#000000;
+font-size:1.7em;
+}
+
+#div1
+{
+margin-top:.2%;
+width:70%;
+height:69.8%;
+background:url("cs.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+float:right;
+}
+
+#div2
+{
+margin-top:.2%;
+width:29.5%;
+height:69.6%;
+//background:#ddd;
+float:left;
+}
+
+table
+{
+width:100%;
+height:90%;
+}
+
+input
+{
+font-size:1.3em;
+width:75%;
+height:25%;
+border-style:outset;
+border-color:#ddd;
+border-radius:10px;
+outline:none;
+}
+
+#p1
+{
+margin:0%;
+text-align:center;
+font-size:1.2em;
+color:#000;
+}
+
+#p1 a
+{
+text-decoration:none;
+font-size:1.2em;
+color:#a6d;
+}
+
+footer
+{
+width:100%;
+margin-top:0.2%;
+background:#ffe4c4;
+height:9.2%;
+float:left;	
+}
+
+</style>
+
+<script>
+function fun1()
+{
+document.getElementById("div1").style.backgroundImage="url('bio.jpg')";
+setTimeout(fun2,3000);
+}
+function fun2()
+{
+document.getElementById("div1").style.backgroundImage="url('chem.jpg')";
+setTimeout(fun3,3000);
+}
+function fun3()
+{
+document.getElementById("div1").style.backgroundImage="url('phy.jpg')";
+setTimeout(fun4,3000);
+}
+function fun4()
+{
+document.getElementById("div1").style.backgroundImage="url('math.jpg')";
+setTimeout(fun5,3000);
+}
+function fun5()
+{
+document.getElementById("div1").style.backgroundImage="url('cs.jpg')";
+setTimeout(fun1,3000);
+}
+
+</script>
+</head>
+
+<body onload="setTimeout(fun1,3000)" text="#dc143c">
+<header>
+<h1 align="center"> PAATHSHAALA </h1>
+</header>
+
+<nav>
+<a href="index_1.html">Home</a>
+<a href="content.html">Content</a>
+<a href="about_us.html">About Us</a>
+<a href="contact_us.html">Contact Us</a>
+
+</nav>
+
+<div id="div2">
+<form action="login.php" method="post">
+<table>
+<tr><td><input type="text" name="uname" placeholder="Email" required autocomplete></td></tr>
+<tr><td><input type="password" name="pass" placeholder="Password" required autocomplete> </td></tr>
+<tr><td><input type="submit" value="Login"></td></tr>
+</table>
+</form>
+<p id="p1">New user?<a href="signup.php"> Signup here</a></p>
+</div>
+
+<div id="div1">
+</div>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
